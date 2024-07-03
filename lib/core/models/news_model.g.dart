@@ -19,7 +19,7 @@ Map<String, dynamic> _$NewsListModelToJson(NewsListModel instance) =>
     };
 
 NewsModel _$NewsModelFromJson(Map<String, dynamic> json) => NewsModel(
-      id: json['id'] as String,
+      id: (json['id'] as num).toInt(),
       site_id: (json['site_id'] as num).toInt(),
       title: json['title'] as String,
       link: json['link'] as String,

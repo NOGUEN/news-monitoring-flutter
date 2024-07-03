@@ -20,7 +20,7 @@ class NewsListModel {
 
 @JsonSerializable()
 class NewsModel {
-  final String id;
+  final int id;
   final int site_id;
   final String title;
   final String link;

@@ -20,7 +20,7 @@ Map<String, dynamic> _$NewsSiteListModelToJson(NewsSiteListModel instance) =>
 
 NewsSiteModel _$NewsSiteModelFromJson(Map<String, dynamic> json) =>
     NewsSiteModel(
-      id: json['id'] as String,
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       url: json['url'] as String,
       created_at: json['created_at'] as String,

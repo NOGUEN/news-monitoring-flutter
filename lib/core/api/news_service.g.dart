@@ -143,13 +143,13 @@ class _NewsService implements NewsService {
   }
 
   @override
-  Future<NewsListModel> getPageCount(int limit) async {
+  Future<PageCountModel> getPageCount(int limit) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'limit': limit};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<NewsListModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<PageCountModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -165,12 +165,12 @@ class _NewsService implements NewsService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final _value = NewsListModel.fromJson(_result.data!);
+    final _value = PageCountModel.fromJson(_result.data!);
     return _value;
   }
 
   @override
-  Future<NewsListModel> getPageCountBySiteId(
+  Future<PageCountModel> getPageCountBySiteId(
     int siteId,
     int limit,
   ) async {
@@ -182,7 +182,7 @@ class _NewsService implements NewsService {
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<NewsListModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<PageCountModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -198,7 +198,7 @@ class _NewsService implements NewsService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final _value = NewsListModel.fromJson(_result.data!);
+    final _value = PageCountModel.fromJson(_result.data!);
     return _value;
   }
 

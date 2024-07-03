@@ -20,7 +20,7 @@ class NewsSiteListModel {
 
 @JsonSerializable()
 class NewsSiteModel {
-  final String id;
+  final int id;
   final String name;
   final String url;
   final String created_at;

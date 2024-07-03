@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:news_monitoring/core/models/news_model.dart';
 import 'package:news_monitoring/core/models/news_site_model.dart';
+import 'package:news_monitoring/core/models/page_count_model.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'news_service.g.dart';
@@ -32,12 +33,12 @@ abstract class NewsService {
   );
 
   @GET('/news/page/count')
-  Future<NewsListModel> getPageCount(
+  Future<PageCountModel> getPageCount(
     @Query('limit') int limit,
   );
 
   @GET('/news/page/count/site')
-  Future<NewsListModel> getPageCountBySiteId(
+  Future<PageCountModel> getPageCountBySiteId(
     @Query('siteId') int siteId,
     @Query('limit') int limit,
   );
