@@ -1,6 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors
 import 'package:flutter/material.dart';
-import 'package:news_monitoring/core/view_models/home_viewmodel.dart';
+import 'package:news_monitoring/core/viewmodels/home_viewmodel.dart';
 import 'package:news_monitoring/ui/design_system/app_colors.dart';
 import 'package:news_monitoring/ui/widgets/base_widget.dart';
 
